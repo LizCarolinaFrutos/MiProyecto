@@ -1,0 +1,201 @@
+
+/****************************/
+/*Bibliotecas*/
+
+.container__main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Sección de Búsqueda */
+/* Estilo para el campo de búsqueda */
+#searchInput {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilos para los botones de filtro */
+.container__filters {
+  margin: 1rem 0;
+}
+
+.filter-btn {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #fefefe;
+  border: 1px solid #fbbff9;
+  background-color: #EE03F1;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #fbbff9;
+  border-color: #aaa;
+}
+
+.container__search {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.container__search input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.container__search button {
+  padding: 10px;
+  background-color: #9932CC;;
+  border: 1px solid #9932CC;;
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container__search button:hover
+
+.container__table {
+  max-width: 1200px;
+  margin: 20px auto;
+  width: 80%;
+  overflow-x: auto;
+}
+
+/* Tabla de Libros */
+.books__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+.books__table th, .books__table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.books__table th {
+  background-color: #9932CC;;
+  color: white;
+}
+
+.status-select {
+  padding: 5px;
+}
+
+.rating-input {
+  width: 50px;
+}
+
+/* Estilos para los campos deshabilitados */
+.disabled-input {
+  background-color: #f1f1f1;
+  border: none;
+  pointer-events: none;
+}
+
+/* Estilos para los botones de acción */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-buttons button {
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.action-buttons button.edit-btn {
+  background-color: #EE03F1;
+  color: white;
+}
+
+.action-buttons button.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.add-book-btn, .quote-btn, .edit-btn, .delete-btn {
+  background-color: #EE03F1;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px 0;
+  transition: background-color 0.3s;
+}
+
+.add-book-btn:hover, .quote-btn:hover, .edit-btn:hover, .delete-btn:hover {
+  background-color: #EE03F1;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal__content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#quoteText {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#saveQuoteBtn, #saveBookBtn {
+  background-color: #EE03F1;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#saveQuoteBtn:hover, #saveBookBtn:hover {
+  background-color: #EE03F1;
+}
+

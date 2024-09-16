@@ -1,0 +1,81 @@
+Login-Register
+│
+├── .vscode
+│   └── (archivos de configuración de Visual Studio Code)
+│
+├── assets
+│   ├── css
+│   │   └── estilos.css
+│   ├── images
+│   │   ├── fondo.jpg
+│   │   └── tipplanner.png
+│   └── js
+│       └── script.js
+│
+├── php
+│   ├── cerrar_sesion.php
+│   ├── conexion_be.php
+│   ├── login_usuario_be.php
+│   └── registro_usuario_be.php
+│
+├── BD.sql
+├── bienvenida.php
+└── index.php
+
+En esta estructura:
+
+* La carpeta .vscode contiene archivos de configuración específicos 
+de Visual Studio Code, como preferencias de usuario o ajustes de espacio de trabajo.
+* La carpeta assets contiene subcarpetas para archivos CSS, imágenes y JavaScript 
+relacionados con el diseño y la funcionalidad del sitio web.
+* La carpeta php contiene archivos PHP que manejan la lógica del servidor, como iniciar sesión, 
+registrar usuarios, cerrar sesión, etc.
+* El archivo BD.sql contiene el script de creación de la base de datos y posiblemente su estructura.
+bienvenida.php es la página de bienvenida a la que se redirige el usuario después de iniciar sesión 
+correctamente.
+* Esta estructura proporciona una organización clara y separa los archivos según su propósito y función en el proyecto.
+
+Explicación de los Codigos:
+
+La carpeta "Login-Register" contiene todos los archivos necesarios para implementar un sistema de inicio de sesión y 
+registro de usuarios en un sitio web. Esta estructura de carpetas y archivos está organizada de manera que se separen 
+las diferentes partes del proyecto, como los archivos de código fuente HTML, CSS, JavaScript y PHP, así como los archivos 
+relacionados con la base de datos.
+
+Aquí hay una descripción de la estructura de la carpeta "Login-Register":
+
+1. estilos.css: Este archivo contiene las reglas de estilo CSS que definen la apariencia visual de la página web. 
+En este archivo, se establecen estilos para elementos HTML como el fondo, el diseño del contenido, el tamaño de fuente, 
+los colores, los márgenes, el espaciado y otros aspectos relacionados con el diseño y la presentación de la página.
+
+2. script.js: Aquí se encuentra el código JavaScript que proporciona la funcionalidad interactiva a la página web. 
+Se definen eventos y funciones para manejar acciones como hacer clic en botones, enviar formularios, cambiar entre 
+formularios de inicio de sesión y registro, y manejar las respuestas del servidor. Además, este archivo también contiene 
+funciones para realizar peticiones asíncronas al servidor utilizando Fetch API y procesar los datos recibidos.
+
+3. cerrar_sesion.php: Este archivo PHP maneja la lógica para cerrar la sesión de un usuario. Al ser llamado, 
+destruye la sesión actual del usuario y lo redirige a la página de inicio de sesión (index.php).
+
+4. conexion_be.php: Aquí se encuentra la lógica para establecer la conexión con la base de datos MySQL. 
+Se utiliza la función mysqli_connect() para conectarse al servidor de base de datos y seleccionar la base de datos 
+específica que se va a utilizar en el proyecto.
+
+5. login_usuario_be.php: Este archivo PHP maneja la lógica del servidor para iniciar sesión de un usuario. 
+Recibe los datos del formulario de inicio de sesión (correo y contraseña), los valida en la base de datos 
+y devuelve una respuesta JSON indicando si el inicio de sesión fue exitoso o no.
+
+6. registro_usuario_be.php: En este archivo PHP se maneja la lógica del servidor para registrar a un nuevo usuario. 
+Recibe los datos del formulario de registro (nombre completo, correo, usuario, contraseña y clave de administrador), 
+los valida en la base de datos y devuelve una respuesta indicando si el registro fue exitoso o no.
+
+7. BD.sql: Este archivo contiene el script SQL para crear la base de datos y la tabla de usuarios. 
+Se define la estructura de la tabla usuarios con columnas como id, nombre_completo, correo, usuario, contrasena y rol. 
+Además, se inserta un usuario administrador inicial en la tabla.
+
+8. bienvenida.php: Esta página PHP verifica si un usuario ha iniciado sesión correctamente. 
+Si es así, muestra un mensaje de bienvenida y un enlace para cerrar sesión. Si no, redirige al usuario a la página de inicio de sesión.
+
+9. index.php: Esta es la página principal del sitio web. Contiene los formularios de inicio de sesión y registro, 
+así como los mensajes de éxito o error después de intentar iniciar sesión o registrarse. Además, maneja la lógica para prellenar 
+los campos del formulario con datos previamente ingresados por el usuario y procesar los eventos de envío del formulario.
+

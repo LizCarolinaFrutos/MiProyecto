@@ -1,0 +1,230 @@
+
+/***********************************************/
+/*Estilos Card´s Autores*/
+
+
+.container__cards{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.container__favorite{
+  max-width: 1200px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container__favorite h1{
+  max-width: 550px;
+  font-size: 50px;
+  font-weight: 900;
+  color: #4B0082;
+}
+
+.container__cards .container__card{
+  margin: auto;
+
+}
+
+.card{
+  width: 300px;
+  margin: 10px;
+  transition: all 300ms;
+}
+
+.card:hover{
+  width: 350px;
+}
+
+.card .cover{
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0%;
+}
+
+.card .cover img{
+  width: 75%;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 40px;
+  z-index: 1;
+  filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+  transition: all 400ms;
+}
+
+.card:hover .cover img{
+  top: 0px;
+  filter: none;
+}
+
+.card .img__back{
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  background-size: cover;
+  border-radius: 20px;
+  transition: all 300ms;
+}
+
+.card:nth-of-type(1) .img__back{
+  background-image: url(../images/bg-1.jpg);
+}
+
+.card:nth-of-type(2) .img__back{
+  background-image: url(../images/bg-2.jpg);
+}
+
+.card:nth-of-type(3) .img__back{
+  background-image: url(../images/bg-3.jpg);
+}
+
+.card:hover .img__back{
+  bottom: -40px;
+}
+
+.card .description{
+  background: white;
+  margin-top: -10px;
+  padding: 20px;
+  border-radius: 0px 0px 20px 20px;
+  transition: all 300ms;
+}
+
+.card:hover .description{
+  padding: 40px;
+}
+
+.card .description h2{
+  margin-top: 10px;
+}
+
+.card .description p{
+  margin-top: 10px;
+}
+
+.card .description input{
+  padding: 10px 40px;
+  margin-top: 20px;
+  border: none;
+  background: #A6359D;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 300ms;
+}
+
+.card .description input:hover{
+  background: #83277b;
+}
+
+.container__otros h1{
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900;
+  color: #4B0082;
+}
+
+.box{
+  max-width: 1200px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  margin-top: 150px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box a{
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: #fbbff9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.box a:hover{
+  color: #fbbff9;
+  background: #4B0082;
+}
+
+.box-list{
+  list-style: none;
+  padding: 0;
+  width: 300px;
+  height: 60px;
+  margin: 20px auto;
+  background: #4B0082;
+}
+
+.box-list a.list-header{
+  display: block;
+  height: 60px;
+  text-align: center;
+  text-decoration: none;
+  color: #fbbff9;
+  transition: .2 ease-in-out;
+  line-height: 58px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.box-list li{
+  width: 300px;
+  height: 60px;
+  background: #9932CC;
+  color: #fbbff9;
+  text-align: center;
+  margin: 0;
+  transform-origin: 50% 0%;
+  transform: perspective(350px) rotateX(-90deg);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  line-height: 58px;
+}
+
+.box-list:hover li{
+  transform: perspective(350px) rotateX(0deg);
+}
+
+.box-list:hover .list-item-2{
+  transition-delay: 0.2s;
+}
+.box-list:hover .list-item-3{
+  transition-delay: 0.4s;
+}
+.box-list:hover .list-item-4{
+  transition-delay: 0.6s;
+}
+.box-list:hover .list-item-5{
+  transition-delay: 0.8s;
+}
+.box-list:hover .list-item-6{
+  transition-delay: 1s;
+}
+.box-list:hover .list-item-7{
+  transition-delay: 1.2s;
+}
+.box-list:hover .list-item-8{
+  transition-delay: 1.4s;
+}
+.box-list:hover .list-item-9{
+  transition-delay: 1.6s;
+}
+.box-list:hover .list-item-10{
+  transition-delay: 1.8s;
+}
+
+

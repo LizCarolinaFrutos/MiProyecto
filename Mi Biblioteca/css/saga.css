@@ -1,0 +1,289 @@
+
+/****************************/
+/*Sagas*/
+/* Ajustes generales para el slider */
+
+.container__sagas{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /*Para que sea responsive*/
+  position: relative;
+}
+
+.slider{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider .list {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.slider .list .item{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0 0 0 0;
+  flex: 0 0 100%;
+    /* O especifica un ancho fijo */
+}
+
+.slider .list .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.slider .list .item .content{
+  position: absolute;
+  width: 1140px;
+  max-width: 80%;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  box-sizing: border-box;
+  color: #fcf7fc;
+  text-shadow: 0 5px 10px #0004;
+}
+
+.slider .list .item .content .title,
+.slider .list .item .content .name{
+  font-size: 5em;
+  font-family: 'Poppins';
+  font-weight: bold;
+  line-height: 1.3em;
+}
+
+.slider .list .item .content .name{
+  color: #EE03F1;
+  transform: translateZ(60px);
+}
+
+.slider .list .item .content .description{
+  font-size: 16px;
+  font-family: 'Poppins';
+  transform: translateZ(60px);
+}
+
+.slider .list .item .content .button{
+  margin-top: 20px;
+}
+
+.slider .list .item .content .button button{
+  border: none;
+  border-radius: 20px;
+  background-color: #EE03F1;
+  color: #fbbff9;
+  padding: 7px 15px;
+  font-family: 'Poppins';
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.4s;
+}
+
+.slider .list .item .content .button button:hover{
+  background-color: #fbbff9;
+  color: #EE03F1;
+}
+
+/* CSS para Miniaturas */
+.thumbnail{
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: max-content;
+  z-index: 100;
+}
+
+.thumbnail .item{
+  width: 150px;
+  height: 220px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.thumbnail .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.3);
+}
+
+/*nextPrevArrows*/
+.nextPrevArrows{
+  position: absolute;
+  top: 80%;
+  right: 52%;
+  z-index: 100;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nextPrevArrows button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #EE03F1;
+  border: none;
+  color: #fbbff9;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nextPrevArrows button:hover{
+  background-color: #fbbff9;
+  color: #EE03F1;
+}
+
+/*Animation*/
+.slider .list .item:nth-child(1){
+  z-index: 1;
+}
+.slider .list .item:nth-child(1) .content .title,
+.slider .list .item:nth-child(1) .content .name,
+.slider .list .item:nth-child(1) .content .description,
+.slider .list .item:nth-child(1) .content .button{
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+  to{
+    transform: translateY(0px);
+    filter: blur(00px);
+    opacity: 1;
+  }
+}
+
+.slider .list .item:nth-child(1) .content .title{
+  animation-delay: 0.4s;
+}
+.slider .list .item:nth-child(1) .content .name{
+  animation-delay: 0.6s;
+}
+.slider .list .item:nth-child(1) .content .description{
+  animation-delay: 0.8s;
+}
+.slider .list .item:nth-child(1) .content .button{
+  animation-delay: 1s
+}
+
+.slider.next .list .item:nth-child(1) img{
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  border-radius: 30px;
+  animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage{
+  to{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+.slider.next .thumbnail .item:nth-last-child(1){
+  overflow: hidden;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.slider.prev .list .item img{
+  z-index: 100;
+}
+
+@keyframes showThumbnail{
+  from{
+    width: 0;
+    opacity: 0;
+  }
+}
+
+.slider.next .thumbnail{
+  animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+  from{
+    transform: translateX(150px);
+  }
+}
+
+.slider.prev .list .item:nth-child(2){
+  z-index: 2;
+}
+
+.slider.prev .list .item:nth-child(2) img{
+  animation: outFrame 0.5s linear 1 forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@keyframes outFrame{
+  to{
+      width: 150px;
+      height: 220px;
+      bottom: 50px;
+      left: 50%;
+      border-radius: 20px;
+  }
+}
+
+.slider.prev .thumbnail .item:nth-child(1){
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail .5s linear 1 forwards;
+}
+.slider.next .nextPrevArrows button,
+.slider.prev .nextPrevArrows button{
+  pointer-events: none;
+}
+
+
+.slider.prev .list .item:nth-child(2) .content .title,
+.slider.prev .list .item:nth-child(2) .content .name,
+.slider.prev .list .item:nth-child(2) .content .description,
+.slider.prev .list .item:nth-child(2) .content .buttons
+{
+  animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+  to{
+      transform: translateY(-150px);
+      filter: blur(20px);
+      opacity: 0;
+  }
+}
+@media screen and (max-width: 678px) {
+  .slider .list .item .content{
+      padding-right: 0;
+  }
+  .slider .list .item .content .title{
+      font-size: 50px;
+  }
+}
